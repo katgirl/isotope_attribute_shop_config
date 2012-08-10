@@ -31,5 +31,5 @@
 $GLOBALS['TL_LANG']['tl_iso_attributes']['iso_configs'] = array 
 (
   'Shop-Konfiguration',
-  'Wählen Sie die Shops in denen das Attribut <b>nicht</b> angezeigt werden soll.'
+  'Wählen Sie die Shops in denen das Attribut angezeigt werden soll.'
 );

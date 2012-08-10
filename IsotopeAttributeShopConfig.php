@@ -34,8 +34,6 @@ class IsotopeAttributeShopConfig extends Frontend
  
    /**
 	 * Filter Attributes by Shop-Config
-	 * @param array
-	 * @return array
 	 */
 	public function productAttributes(&$arrAttributes, $arrVariantAttributes, IsotopeProduct $objProduct)
 	{   
@@ -48,7 +46,7 @@ class IsotopeAttributeShopConfig extends Frontend
       $shop_config = deserialize($objAttributes->shop_config);
       
       // Remove attributes not in this shop config
-      if ( in_array($config_id, $shop_config) &&  in_array($objAttributes->field_name, $arrAttributes) )
+      if ( !in_array($config_id, $shop_config) && in_array($objAttributes->field_name, $arrAttributes) )
       {   
         $key = array_search($objAttributes->field_name, $arrAttributes);     
         unset($arrAttributes[$key]);      
